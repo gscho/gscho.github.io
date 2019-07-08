@@ -1,0 +1,12 @@
+baseURL = "https://schofield.dev/"
+languageCode = "en-us"
+title = "Greg Schofield"
+theme = "hugo-theme-basic"
+
+[[params.menu]]
+  name = "posts"
+  url = "posts/"
+
+[[params.menu]]
+  name = "about"
+  url = "about/"
