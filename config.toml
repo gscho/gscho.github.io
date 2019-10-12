@@ -2,6 +2,10 @@ baseURL = "https://schofield.dev/"
 languageCode = "en-us"
 title = "Greg Schofield"
 theme = "hugo-theme-basic"
+author = "Mike Perham"
+shortDescription = "Ruby, OSS and the Internet"
+email = "mperham@gmail.com"
+github = "mperham"
 
 [[params.menu]]
   name = "posts"
