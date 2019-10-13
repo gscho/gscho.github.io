@@ -1,7 +1,6 @@
 ---
 title: "What Is Chef Habitat?"
 date: 2019-10-12T09:33:26-04:00
-draft: true
 tags: ["chef", "habitat"]
 categories: ["software"]
 ---
