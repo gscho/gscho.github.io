@@ -35,7 +35,7 @@ Response:
 ```
 
 
-## Habitat is a service discovery and dynamic service configuration tool
+## Habitat is a service discovery and configuration tool
 
 The habitat supervisor has the ability to `peer` with other habitat supervisors to create a [GOSSIP](https://en.wikipedia.org/wiki/Gossip_protocol) ring. Through peering supervisors, you're able to create service groups which can share configuration with each other. For example if you have peered N supervisors each running a redis service, you can apply a configuration to all of the redis servers in your ring at once with a single command.
 
