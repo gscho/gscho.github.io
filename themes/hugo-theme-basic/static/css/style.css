@@ -28,3 +28,11 @@ code {
   -webkit-font-smoothings: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.inline-svg {
+  display: inline-block;
+  height: 1.75rem;
+  width: 1.75rem;
+  top: 0.15rem;
+  position: relative;
+}
