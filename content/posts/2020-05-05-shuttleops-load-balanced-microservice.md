@@ -113,7 +113,7 @@ git push -u origin master
 
 To build our application, head over to [ShuttleOps](https://app.shuttleops.io) and login with your VCS provider.
 
-Once loggeed in we will add our [Habitat Builder](https://bldr.habitat.sh) token to the ShuttleOps vault via the `Connect` page so that ShuttleOps can upload and promote our packages. Make sure you have also created an origin on Habitat Builder so we can upload your package!
+Once logged in we will add our [Habitat Builder](https://bldr.habitat.sh) token to the ShuttleOps vault via the `Connect` page so that ShuttleOps can upload and promote our packages. Make sure you have also created an origin on Habitat Builder so we can upload your package!
 
 
 ![ConnectHabitat](/images/connect_habitat.png)
