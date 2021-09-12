@@ -1,0 +1,10 @@
+- name: Home
+  link: /
+- name: Blog
+  link: /blog
+- name: About
+  link: /about
+- name: GitHub
+  link: https://github.com/gscho
+- name: Contact
+  link: /contact
