@@ -1,12 +1,13 @@
 ---
 layout: default
-title: "Managing Hab-Sup With Runit"
+title: "managing hab-sup with runit"
+header: "managing hab-sup with runit"
 date: 2019-10-18T12:06:42-04:00
 ---
 
 The habitat supervisor is a component of [Chef Habitat](../2019-10-12-what-is-habitat) that will manage the lifecycle of habitat services but what manages the habitat supervisor?
 
-There are a few good tutorials out there on how to do this via systemd but let's look at doing it using runit.
+There are a few good tutorials out there on how to do this via systemd but let's look at doing it using [runit](http://smarden.org/runit/).
 
 ## What is runit?
 

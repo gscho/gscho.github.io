@@ -1,20 +1,15 @@
 ---
 layout: default
-title: About
-header: About
+title: about | Greg Schofield
+header: about
 description: About me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hi I'm Greg! I'm based in Ontario Canada and currently work as a Customer Success Architect for GitHub.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+<img src="{{ site.baseurl }}/assets/images/avatar.png" alt="Avatar" width="300"/>
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+Before joining GitHub, I spent 6 years working in professional services providing solutions as a Software Developer, DevOps Engineer and Customer Architect.
 
-
-[jekyll-organization]: https://github.com/jekyll
+I'm most interested in solutions architecture, CI/CD and build & release management.
