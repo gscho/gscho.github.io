@@ -17,15 +17,13 @@ Runit is a Unix init scheme that will start services on boot and keep them runni
 
 For this tutorial we're going to be using [vagrant](https://www.vagrantup.com/downloads.html) so make sure that's installed first.
 
-Create a directory to work out of and a Vagrantfile.
+Create a directory to work out of and a `Vagrantfile`.
 
-```bash
-mkdir ~/hab-runit
-cd ~/hab-runit
-touch Vagrantfile
-```
+    $ mkdir ~/hab-runit
+    $ cd ~/hab-runit
+    $ touch Vagrantfile
 
-The contents of your Vagrant file should be the following.
+The contents of your `Vagrantfile` should be the following.
 
 ```ruby
 Vagrant.configure("2") do |config|
@@ -36,45 +34,35 @@ end
 
 This vagrant box is based on centos 7.4 and has habitat 0.88.0 pre-installed. After the file has been updated you can bring up a vagrant guest and login.
 
-```bash
-vagrant ssh
-vagrant up
-```
-
+    $ vagrant ssh
+    $ vagrant up
 
 And switch to root.
 
-```bash
-sudo su
-```
+    $ sudo su
 
 The last step is installing runit since centos 7.4 does not come with it by default. **You can skip this step on distros that come with runit pre-installed or included in their package repo**.
 
-```bash
-curl -s https://packagecloud.io/install/repositories/imeyer/runit/script.rpm.sh | sudo bash
-yum install -y runit
-```
+    $ curl -s https://packagecloud.io/install/repositories/imeyer/runit/script.rpm.sh | sudo bash
+    $ yum install -y runit
+
 
 ## Creating the hab-sup runit template
 
 To set up a runit template for the hab-sup service we create the required directory structure inside of `/etc/`. To do this we first create the `/etc/sv/hab-sup` directory and the `run` files that will instruct runit how to run the service and collect its logs.
 
-```bash
-mkdir /etc/sv
-mkdir /etc/sv/hab-sup
-mkdir /etc/sv/hab-sup/log
-mkdir /etc/sv/hab-sup/env
-touch /etc/sv/hab-sup/run
-touch /etc/sv/hab-sup/log/run
-chmod +x /etc/sv/hab-sup/run
-chmod +x /etc/sv/hab-sup/log/run
-```
+    $ mkdir /etc/sv
+    $ mkdir /etc/sv/hab-sup
+    $ mkdir /etc/sv/hab-sup/log
+    $ mkdir /etc/sv/hab-sup/env
+    $ touch /etc/sv/hab-sup/run
+    $ touch /etc/sv/hab-sup/log/run
+    $ chmod +x /etc/sv/hab-sup/run
+    $ chmod +x /etc/sv/hab-sup/log/run
 
 We also need to create a directory that we can log our services output to. Let's use `/var/log/hab-sup`.
 
-```bash
-mkdir -p /var/log/hab-sup
-```
+    $ mkdir -p /var/log/hab-sup
 
 ### The run file in `/etc/sv/hab-sup/log`
 
@@ -97,9 +85,7 @@ Runit expects that the name of each file in the env directory to be the name (ke
 
 Let's set the `HAB_BLDR_URL` environment variable for our service.
 
-```bash
-echo "https://bldr.habitat.sh" >> /etc/sv/hab-sup/env/HAB_BLDR_URL
-```
+    $ echo "https://bldr.habitat.sh" >> /etc/sv/hab-sup/env/HAB_BLDR_URL
 
 ### The run file in `/etc/sv/hab-sup`
 
@@ -118,9 +104,7 @@ Here we execute `chpst` and pass the `-e` flag to tell it the path to our enviro
 
 The final step now that our service template has been created is to add a symbolic link for `/etc/sv/hab-sup` to `/etc/service`. Most distros use this directory as the service directory but you can double check using `ps -ef | grep runsvdir` to see what runit is watching. This step makes runit aware that the hab-sup service should be started and kept alive.
 
-```bash
-ln -s /etc/sv/hab-sup /etc/service/hab-sup
-```
+    $ ln -s /etc/sv/hab-sup /etc/service/hab-sup
 
 Within 5 seconds runit will recognize the change and start the service!
 

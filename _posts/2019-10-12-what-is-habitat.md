@@ -17,9 +17,7 @@ This alone is a pretty cool feature since it's the only package manager that wor
 
 For example, installing and adding jq to your `$PATH` on linux, windows or inside a docker container is all the same command.
 
-```
-hab pkg install core/jq-static --binlink
-```
+    $ hab pkg install core/jq-static --binlink
 
 ## Habitat is a service manager
 
@@ -27,27 +25,18 @@ The next component of habitat is the habitat supervisor. This component is a ser
 
 The habitat supervisor is responsible for running these services and making sure they stay up. It also exposes an API on `0.0.0.0:9631` that lets you query for services and their health.
 
-```
-curl localhost:9631/services/redis/prod/health
-
-Response:
-{"status":"OK","stdout":"","stderr":""}
-```
-
+    $ curl localhost:9631/services/redis/prod/health
+    > {"status":"OK","stdout":"","stderr":""}
 
 ## Habitat is a service discovery and configuration tool
 
 The habitat supervisor has the ability to `peer` with other habitat supervisors to create a [GOSSIP](https://en.wikipedia.org/wiki/Gossip_protocol) ring. Through peering supervisors, you're able to create service groups which can share configuration with each other. For example if you have peered N supervisors each running a redis service, you can apply a configuration to all of the redis servers in your ring at once with a single command.
 
-```
-hab config apply redis.prod $(date +%s) redis.toml
-```
+    $ hab config apply redis.prod $(date +%s) redis.toml
 
 Habitat rings also open up the ability to `bind` with other service groups so you can do service discovery. For example, if you had defined a rails application that required redis, you can use the habitat bind information to discover its IP and port and automatically configure the rails app with that information.
 
-```
-hab svc load gscho/my-rails-pkg --bind redis.prod
-```
+    $ hab svc load gscho/my-rails-pkg --bind redis.prod
 
 ## Summary
 

@@ -2,8 +2,7 @@ title: Greg Schofield
 email: greg.c.schofield@gmail.com
 description: >-
   Greg Schofield's blog where I write about chef and ruby and aws and devops and github and azure and whatever else I feel like.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://gscho.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 plugins:
