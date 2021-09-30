@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/sakura.css" async>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/custom.css" async>
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}" />
+    {% feed_meta %}
+  </head>
+  <body>
+    <div class="toggle">
+      <button class="darkbutton" id="dark-button" onclick="darkToggle()">dark</button>
+    </div>
+    <header>
+      <h1>#{Greg Schofield} >> <br>{{ page.header }}</h1>
+
+      {% include navigation.html %}
+    </header>
+    <br>
+    <main>
+      {{ content }}
+    </main>
+    <br>
+    <footer>
+      <hr>
+      <small>Welcome to my little slice of the internet.</small>
+    </footer>
+  </body>
+  <script src="{{ site.baseurl }}/assets/js/darkmode.js"></script>
+ </html>
