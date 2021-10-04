@@ -1,8 +1,0 @@
-- name: posts
-  link: /
-- name: about
-  link: /about
-- name: github
-  link: https://github.com/gscho
-- name: rss
-  link: /feed.xml
