@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "some notes on chef habitat"
-header: "some notes on chef habitat"
+title: "Some notes on chef habitat"
+header: "Some notes on chef habitat"
 date: 2019-10-12T09:33:26-04:00
 ---
 

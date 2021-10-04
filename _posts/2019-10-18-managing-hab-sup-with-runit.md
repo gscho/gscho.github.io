@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "managing hab-sup with runit"
-header: "managing hab-sup with runit"
+title: "Managing hab-sup with runit"
+header: "Managing hab-sup with runit"
 date: 2019-10-18T12:06:42-04:00
 ---
 
