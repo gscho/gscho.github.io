@@ -32,13 +32,10 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-This vagrant box is based on centos 7.4 and has habitat 0.88.0 pre-installed. After the file has been updated you can bring up a vagrant guest and login.
+This vagrant box is based on centos 7.4 and has habitat 0.88.0 pre-installed. After the file has been updated you can bring up a vagrant guest and login. And switch to root.
 
-    $ vagrant ssh
     $ vagrant up
-
-And switch to root.
-
+    $ vagrant ssh
     $ sudo su
 
 The last step is installing runit since centos 7.4 does not come with it by default. **You can skip this step on distros that come with runit pre-installed or included in their package repo**.

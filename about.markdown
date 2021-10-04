@@ -1,11 +1,9 @@
 ---
-layout: default
-title: about | Greg Schofield
-header: about
-description: About me
+title: About | Greg Schofield
 permalink: /about/
 ---
 
+<h1> About Me </h1>
 Hi I'm Greg! I'm based in Ontario Canada and currently work as a Customer Success Architect for GitHub.
 
 <img src="{{ site.baseurl }}/assets/images/avatar.png" alt="Avatar" width="300"/>
