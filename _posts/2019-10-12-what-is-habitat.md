@@ -5,6 +5,8 @@ header: "Some notes on chef habitat"
 date: 2019-10-12T09:33:26-04:00
 ---
 
+# Some notes on chef habitat
+
 What is Chef Habitat? This is a question I get a lot from clients, meetups and conferences (even ChefConf). If you visit [the habitat website](https://www.habitat.sh/) you'll probably see some marketing mumbo jumbo like "Application Automation Framework" or "Automation that travels with your app". The real answer is habitat consists of a few different components so it's hard to categorize in a single sentence.
 
 ## Habitat is a cross-platform package manager

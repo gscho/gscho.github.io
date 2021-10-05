@@ -3,6 +3,8 @@ title: "Creating cloud resources using fog"
 date: 2019-07-09T18:46:26-04:00
 ---
 
+# Creating cloud resources using fog
+
 ![fog-logo]({{ site.baseurl }}/assets/images/fog-logo.png)
 
 ## What is fog?
