@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Automate enabling GitHub Actions for GitHub Enterprise Server"
-header: "Automate enabling GitHub Actions for GitHub Enterprise Server"
+title: "Enabling Actions for GitHub Enterprise Server using the settings API"
+header: "Enabling Actions for GitHub Enterprise Server using the settings API"
 date: 2021-09-21
 ---
 
-# Automate enabling GitHub Actions for GitHub Enterprise Server
+# Enabling Actions for GitHub Enterprise Server using the settings API
 
 When automating a GitHub Enterprise Server deployment, the [set-settings](https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin#set-settings) API can be used to pass a `settings.json` object to configure the server. The `settings.json` object can be retreived from the [get-settings](https://docs.github.com/en/enterprise-server@3.1/rest/reference/enterprise-admin#get-settings) API of your enterprise server.
 
